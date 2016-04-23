@@ -1,0 +1,90 @@
+{
+	"name": "Semantic Images",
+	"version": "1.0",
+	"description": "Adds semantic information to images. For e.g. search engines.",
+	"demo": "http://ontheroad.pulponair.de",
+	"author": {
+		"name": "Nikolas Hagelstein",
+		"link": "http://ontheroad.pulponair.de"
+	},
+	"data": {
+		"property_name": {
+			"label": "Name",
+			"type": "select",
+			"info" : "The name for this object. If the corresponding image field is empty, the tag won't be rendered. See: http://schema.org/ImageObject",
+			"options": [
+				{ "label": "Do not render", "value": 0 },
+				{ "label": "Use title", "value": "image/title" },
+				{ "label": "Use filename", "value": "image/filename" },
+				{ "label": "Use caption", "value": "image/caption" }
+			]
+		},
+		"property_caption": {
+			"label": "Caption",
+			"type": "select",
+			"info" : "The caption for this object.  If the corresponding image field is empty, the tag won't be rendered. See: http://schema.org/ImageObject",
+			"options": [
+				{ "label": "Do not render", "value": 0 },
+				{ "label": "Use title", "value": "image/title" },
+				{ "label": "Use filename", "value": "image/filename" },
+				{ "label": "Use caption", "value": "image/caption" }
+			]
+		},
+		"property_description": {
+			"label": "Description",
+			"type": "select",
+			"info" : "The description for this object.  If the corresponding image field is empty, the tag won't be rendered. See: http://schema.org/ImageObject",
+			"options": [
+				{ "label": "Do not render", "value": 0 },
+				{ "label": "Use title", "value": "image/title" },
+				{ "label": "Use filename", "value": "image/filename" },
+				{ "label": "Use caption", "value": "image/caption" }
+			]
+		},
+		"property_contentUrl": {
+			"label": "Content URL",
+			"type": "select",
+			"info" : "Actual bytes of the image object, for example the image file. See: http://schema.org/ImageObject",
+			"options": [
+				{ "label": "Do not render", "value": 0 },
+				{ "label": "Use content url", "value": "url" },
+				{ "label": "Use canoncial content url", "value": "image/canonical_url" },
+				{ "label": "Use tiny preset url", "value": "image/presets/tiny/url" },
+				{ "label": "Use small preset url", "value": "image/presets/small/url" },
+				{ "label": "Use medium preset url", "value": "image/presets/medium/url" },
+				{ "label": "Use medium large preset url", "value": "image/presets/medium_large/url" },
+				{ "label": "Use large preset url", "value": "image/presets/large/url" },
+				{ "label": "Use xlarge preset url", "value": "image/presets/xlarge/url" },
+				{ "label": "Use xhuge preset url", "value": "image/presets/huge/url" }
+			]
+		},
+
+		"property_thumbnailUrl": {
+			"label": "Thumbnail URL",
+			"type": "select",
+			"info" : "A thumbnail image relevant to the image object. See: http://schema.org/ImageObject",
+			"options": [
+				{ "label": "Do not render", "value": 0 },
+				{ "label": "Use tiny preset url", "value": "image/presets/tiny/url" },
+				{ "label": "Use small preset url", "value": "image/presets/small/url" },
+				{ "label": "Use medium preset url", "value": "image/presets/medium/url" }
+			]
+		},
+		"property_author": {
+			"label": "Render author",
+			"type": "boolean",
+			"info" : "The author of the image. We use the profile first/lastname. See: http://schema.org/ImageObject"
+		},
+		"property_dateCreated": {
+			"label": "Render date created",
+			"type": "boolean",
+			"info" : "The date on which the image was created i.e taken. See: http://schema.org/ImageObject"
+		},
+		"property_datePublished": {
+			"label": "Render date published",
+			"type": "boolean",
+			"info" : "The date on which the image was published. See: http://schema.org/ImageObject"
+		}
+	},
+	"koken_version_required": "0.2.0"
+}

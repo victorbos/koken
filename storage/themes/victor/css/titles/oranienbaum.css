@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Oranienbaum';
+    src: url('../fonts/oranienbaum/Oranienbaum-Regular-webfont.eot');
+    src: url('../fonts/oranienbaum/Oranienbaum-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oranienbaum/Oranienbaum-Regular-webfont.woff') format('woff'),
+         url('../fonts/oranienbaum/Oranienbaum-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/oranienbaum/Oranienbaum-Regular-webfont.svg#oranienbaumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+h1.site_title
+{
+	font-family: 'Oranienbaum', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

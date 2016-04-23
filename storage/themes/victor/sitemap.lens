@@ -1,0 +1,68 @@
+<koken:include file="layouts/header.html" />
+
+<koken:title></koken:title>
+		<div id="page-title">
+			<h1>
+				Sitemap
+			</h1>
+		</div>
+
+<koken:load>
+	<koken:head>
+		<meta property="og:site_name" content="{{ site.title }}" />
+		<meta property="og:title" content="{{ site.title }}" />
+		<meta property="og:description" content="{{ site.description strip_html='true' }}" />
+		<meta property="og:type" content="website" />
+		<koken:first>
+		<meta property="og:image" content="{{ content.presets.medium_large.url }}" />
+		<meta property="og:image:width" content="{{ content.presets.medium_large.width }}" />
+		<meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
+		</koken:first>
+		<meta property="og:url" content="{{ location.site_url }}{{ location.here }}" />
+		<koken:not empty="profile.twitter">
+			<meta name="twitter:card" content="gallery" />
+			<meta name="twitter:site" content="@{{ profile.twitter }}" />
+			<meta name="twitter:creator" content="@{{ profile.twitter }}" />
+			<koken:loop limit="4">
+				<meta name="twitter:image{{ index }}" content="{{ content.presets.medium_large.cropped.url }}">
+			</koken:loop>
+		</koken:not>
+	</koken:head>
+</koken:load>
+
+
+<div class="table" style="display: table; text-align:left">
+        <koken:load source="albums" infinite="true" order_by="title">
+
+            <koken:loop>
+                <koken:if data="album.album_type" equals="standard">
+                    <h1>{{ album.title }} </h1>
+                    <koken:load source="album" filter:id="{{ album.id }}">
+                        <div id="table-row"  style="display: table-row">
+                            <div id="table-cell" style="display: table-cell; width:5%;font-weight: bold; text-align:right; padding-right:1em">id
+                            </div>
+                            <div id="table-cell" style="display: table-cell;font-weight: bold; width:25%">Titel
+                            </div>
+                            <div id="table-cell" style="display: table-cell;font-weight: bold;">Omschrijving
+                            </div>
+                        </div>
+
+                        <koken:loop>
+                            <div id="table-row" style="display: table-row" ; padding: 1em>
+                                <div id="table-cell" style="display: table-cell; text-align:right; padding-right:1em">{{ content.id }}
+                                </div>
+                                <div id="table-cell" style="display: table-cell"><koken:link>{{ content.title }}</koken:link>
+                                </div>
+                                <div id="table-cell" style="display: table-cell">{{ content.caption }}
+                                </div>
+                            </div>
+                        </koken:loop>
+                    </koken:load>
+                    <hr>
+                </koken:if>
+            </koken:loop>
+        </koken:load>
+</div>
+
+
+<koken:include file="layouts/footer.html" />

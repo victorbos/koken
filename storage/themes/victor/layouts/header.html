@@ -1,0 +1,98 @@
+<koken:if true="pjax">
+	<koken:title />
+<koken:else>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+	<koken:meta />
+	<koken:title />
+
+	<link rel="shortcut icon" href="{{ location.theme_path }}/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="{{ location.theme_path }}/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="{{ location.theme_path }}/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="{{ location.theme_path }}/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ location.theme_path }}/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="{{ location.theme_path }}/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="{{ location.theme_path }}/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="{{ location.theme_path }}/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="{{ location.theme_path }}/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ location.theme_path }}/apple-touch-icon-180x180.png" />
+
+	<koken:asset file="reset.css" common="true" />
+	<koken:if true="settings.social_bttns_show_one"><koken:asset file="css/kicons.css" /></koken:if>
+	<koken:settings />
+
+	<koken:asset file="jquery.pjax.js" common="true" />
+	<koken:asset file="jquery.pjax-transition.js" common="true" />
+	<koken:asset file="pillar.js" common="true" />
+	<koken:asset file="js/axis.js" />
+	<koken:asset file="js/jquery.scrollTo.min.js" />
+	<koken:asset file="js/swiftclick.min.js" />
+
+
+</head>
+
+<body class="k_mob_show_{{ settings.mob_nav_display }}">
+
+	<a name="top" id="top"></a>
+
+	<koken:if true="settings.social_bttns_show_two">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	</koken:if>
+
+	<nav id="mob_nav" class="layout_{{ settings.mob_nav_layout }} layout_desk_{{ settings.mob_nav_layout_desktop }}">
+		<div id="mob_pag_up" class="mob_pag">
+			<a id="backtop_mob" class="backtop_link arrow_font" href="#top" data-bind-to-key="up" title="Back to top"><i class="kicon-angle-up"></i></a>
+		</div>
+		<div id="mob_pag_down" class="mob_pag">
+			<a href="#" class="arrow_font" title="Next" data-koken-keyboard-scroll-next><i class="kicon-angle-down"></i></a>
+		</div>
+		<div class="mob_nav_content">
+			<koken:navigation />
+		</div>
+		<a href="#" id="mt"><span></span></a>
+	</nav>
+
+	<div id="container">
+
+		<header class="top">
+
+			<div class="site_title_block">
+
+
+				<koken:if data="settings.site_title_type" equals="text">
+					<h1 class="site_title">
+						<!--<koken:link to="front" title="{{ labels.home.singular }}"><img src="{{ location.theme_path }}/logo.gif"> {{ site.title }}</koken:link>-->
+						<koken:link to="front" title="{{ labels.home.singular }}"><img src="{{ location.theme_path }}/{{ settings.site_title_img_url }}"> {{ site.title }}</koken:link>
+					</h1>
+				<koken:else>
+					<koken:link to="front" title="{{ labels.home.singular }}"><img src="{{ settings.site_title_img_url }}" alt="{{ site.title }}" class="custom_logo"></koken:link>
+				</koken:if>
+				<koken:if true="settings.show_tagline">
+					<div class="site_tagline">
+						{{ site.tagline }}
+					</div>
+				</koken:if>
+
+			</div>
+
+			<nav id="main">
+				<koken:navigation />
+			</nav>
+
+		</header>
+
+</koken:if>
+
+		<main class="pjax-transition-container">

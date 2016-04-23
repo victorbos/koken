@@ -1,0 +1,221 @@
+/* FORM ELEMENTS
+----------------------------------------------- */
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"]
+{
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-align: center;
+    display: inline-block;
+    padding:1em 2em;
+    margin:0;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color:transparent;
+    border:1px solid rgba(255,255,255,0.3);
+    color:#cccccc;
+    cursor: pointer;
+    outline:0;
+    vertical-align:bottom;
+    -webkit-transition:all 0.2s ease-in-out;
+    transition:all 0.2s ease-in-out;
+}
+
+.button:disabled,
+button:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="button"]:disabled
+{
+    color:#999999;
+    border-color:rgba(255,255,255,0.15);
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+    border-color:rgba(255,255,255,0.3);
+    color:#cccccc;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    color:#cccccc;
+    font-size:13px;
+    font-family:inherit !important;
+    padding: 0.5em;
+    margin:0;
+    background-color:transparent;
+    outline:none;
+    border:1px solid rgba(255,255,255,0.15);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-transition:all 0.2s ease-in-out;
+    transition:all 0.2s ease-in-out;
+}
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    color:#ccccc;
+    border-color:rgba(255,255,255,0.3);
+    outline: 0;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder
+{
+    color:rgba(255,255,255,0.44);
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder
+{
+    color:rgba(255,255,255,0.44);
+}
+
+/* CONTACT FORM
+----------------------------------------------- */
+
+.k-contact-form {
+    width: 70%;
+    margin:0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .k-contact-form {
+        width: 100%;
+    }
+}
+
+.k-contact-form fieldset {
+    margin-bottom:2em;
+}
+
+.k-contact-form-email-field label,
+.k-contact-form-textarea-field label,
+.k-contact-form-text-field label,
+.k-contact-form-tel-field label
+{
+    display:block;
+    font-size:11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight:400;
+    color:#cccccc;
+    margin:0 0 0.5em;
+}
+
+.k-contact-form fieldset.k-contact-form-error label {
+    color: red;
+}
+
+.k-contact-form-checkbox-field label {
+    font-size:90%;
+}
+
+.k-contact-form input[type="email"],
+.k-contact-form input[type="number"],
+.k-contact-form input[type="search"],
+.k-contact-form input[type="text"],
+.k-contact-form input[type="tel"],
+.k-contact-form input[type="url"],
+.k-contact-form input[type="password"],
+.k-contact-form textarea
+{
+    width:100%;
+}
+
+.k-contact-form input[type="email"],
+.k-contact-form input[type="number"],
+.k-contact-form input[type="search"],
+.k-contact-form input[type="text"],
+.k-contact-form input[type="tel"],
+.k-contact-form input[type="url"],
+.k-contact-form input[type="password"]
+{
+    text-align:center;
+}
+
+.k-contact-form-success {
+    padding:1em 0;
+    font-size:11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight:400;
+    color:#cccccc;
+}
+
+.k-contact-form-success:before {
+    content: '✔';
+    color:#cccccc;
+    margin-right: 6px;
+}
+
+.k-contact-form-required-field label:after {
+    content: '*';
+    color: red;
+    margin-left:3px;
+}
+
+.k-content-form-processing {
+    opacity: 0.5;
+}
+
+.k-content-form-processing button[type="submit"] {
+    pointer-events: none !important;
+}
+
+.k-contact-form-error input[type="text"],
+.k-contact-form-error input[type="password"],
+.k-contact-form-error input[type="date"],
+.k-contact-form-error input[type="datetime"],
+.k-contact-form-error input[type="datetime-local"],
+.k-contact-form-error input[type="month"],
+.k-contact-form-error input[type="week"],
+.k-contact-form-error input[type="email"],
+.k-contact-form-error input[type="number"],
+.k-contact-form-error input[type="search"],
+.k-contact-form-error input[type="tel"],
+.k-contact-form-error input[type="time"],
+.k-contact-form-error input[type="url"],
+.k-contact-form-error input[type="color"],
+.k-contact-form-error textarea
+{
+    border-color:red;
+}

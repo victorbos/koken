@@ -1,0 +1,40 @@
+<koken:pagination>
+
+	<div class="measure_editable">
+
+		<ul class="nav_content split lh_plus">
+
+			<li>
+				<koken:pagination_previous>
+					<koken:link class="pag mute larr" title="{{ previous_page.number }}" bind_to_key="left" data-paginate-pjax="true">
+						Newer
+					</koken:link>
+				<koken:else>
+					<span class="pag disabled larr">
+						Newer
+					</span>
+				</koken:pagination_previous>
+			</li>
+
+			<li>
+				<koken:link to="essays" class="pag mute">
+					Latest
+				</koken:link>
+			</li>
+
+			<li>
+				<koken:pagination_next>
+					<koken:link class="pag mute rarr" title="{{ next_page.number }}" bind_to_key="right" data-paginate-pjax="true">
+						Older
+					</koken:link>
+				<koken:else>
+					<span class="pag disabled rarr">
+						Older
+					</span>
+				</koken:pagination_next>
+			</li>
+		</ul>
+
+	</div>
+
+</koken:pagination>

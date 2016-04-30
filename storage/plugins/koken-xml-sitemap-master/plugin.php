@@ -162,8 +162,8 @@ class PulonairXmlSitemapTest extends KokenPlugin {
 		$urlChild = $parent->addChild('url');
 		$urlChild->addChild('loc', $item['url']);
 		$urlChild->addChild('lastmod', date('Y-m-d', $item['modified_on']['timestamp']));
-		$urlChild->addChild('changefreq', $changeFreq);
-		$urlChild->addChild('priority', $priority);
+//		$urlChild->addChild('changefreq', $changeFreq);
+//		$urlChild->addChild('priority', $priority);
 
 		return $urlChild;
 	}

@@ -32,12 +32,12 @@
 
 
 <div class="table" style="display: table; text-align:left">
-        <koken:load source="albums" infinite="true" order_by="title">
+        <koken:load source="albums" infinite="true" order_by="title" summary="true">
 
             <koken:loop>
                 <koken:if data="album.album_type" equals="standard">
                     <h1>{{ album.title }} </h1>
-                    <koken:load source="album" filter:id="{{ album.id }}">
+                    <koken:load source="album" filter:id="{{ album.id }} summary="true"">
                         <div id="table-row"  style="display: table-row">
                             <div id="table-cell" style="display: table-cell; width:5%;font-weight: bold; text-align:right; padding-right:1em">id
                             </div>

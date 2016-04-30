@@ -332,6 +332,7 @@ h1.site_title img {
     max-width:[$site_title_size]em;
     max-height:[$site_title_size]em;
     vertical-align: middle;
+    margin-bottom:0px;
 }
 
 img.custom_logo {

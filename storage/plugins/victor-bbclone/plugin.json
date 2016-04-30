@@ -1,0 +1,17 @@
+{
+  "name": "BBClone counter",
+  "version": "1.0",
+  "description": "Adds BBClone code to each page to count statistics",
+  "author": {
+    "name": "Victor Bos",
+    "link": "http://www.victorbos.nl/"
+  },
+
+  "data": {
+    "bbclone_dir": {
+      "label": "BBClone installation directory",
+      "info": "Enter the path to the directory where you installed BBClone",
+      "type": "string"
+    }
+  }
+}
